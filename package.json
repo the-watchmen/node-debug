@@ -1,0 +1,42 @@
+{
+  "name": "@watchmen/debug",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "repository": "the-watchmen/node-debug",
+  "scripts": {
+    "ava": "cross-env DEBUG=dbg:* ava",
+    "pretest": "xo",
+    "test": "npm run ava",
+    "prebuild": "npm run test",
+    "build": "rm -rf dist && babel src -d dist"
+  },
+  "author": "tony kerz",
+  "license": "ISC",
+  "dependencies": {
+    "debug": ">=3",
+    "find-root": ">=1.1"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": ">=6.24",
+    "cross-env": "^5.1.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "prettier": "^1.9.2",
+    "xo": "^0.18.2"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": ["babel-register", "babel-polyfill"]
+  },
+  "xo": {
+    "useEslintrc": true
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
