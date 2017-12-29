@@ -1,4 +1,4 @@
-# node-helpr
+# node-debug
 
 wrapper around the popular [debug](https://github.com/visionmedia/debug) module that generates a conventional namespace from node's current file name variable ([\_\_filename](https://github.com/visionmedia/debug))
 
@@ -14,9 +14,11 @@ wrapper around the popular [debug](https://github.com/visionmedia/debug) module 
 * `yarn add <package name>`
 
 ```
-import debug from '<package name>'
+import debug from '@watchmen/debug'
 
-const dbg = debug(__filename)
+const dbg = debug(__filename) // <-- returns an instance of "core" debug object
+
+dbg('data=%o', data)
 ```
 
 ## example namespaces
