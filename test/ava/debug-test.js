@@ -1,6 +1,6 @@
 import path from 'path'
 import test from 'ava'
-import {debug} from '../../src'
+import debug from '../../src'
 
 test('debug', t => {
   let dbg = debug(__filename)
