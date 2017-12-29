@@ -5,7 +5,7 @@ import findRoot from 'find-root'
 const pre = 'dbg'
 const dbg = _debug('dbg:@watchmen:debug')
 
-export function debug(file) {
+export default function(file) {
   const base = path.basename(file, '.js')
   const dir = path.dirname(file)
   const root = findRoot(dir)

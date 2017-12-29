@@ -1,29 +1,31 @@
 # node-helpr
 
-miscellaneous helper functions
+wrapper around the popular [debug](https://github.com/visionmedia/debug) module that generates a conventional namespace from node's current file name variable ([\_\_filename](https://github.com/visionmedia/debug))
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![Build Status](https://travis-ci.org/the-watchmen/node-helpr.svg?branch=master)](https://travis-ci.org/the-watchmen/node-helpr)
-[![npm (scoped)](https://img.shields.io/npm/v/@watchmen/helpr.svg)](https://img.shields.io/npm/v/@watchmen/helpr.svg)
+[![Build Status](https://travis-ci.org/the-watchmen/node-debug.svg?branch=master)](https://travis-ci.org/the-watchmen/node-debug)
+[![npm (scoped)](https://img.shields.io/npm/v/@watchmen/debug.svg)](https://img.shields.io/npm/v/@watchmen/_debug.svg)
 
 > see [tests](test) for examples
 
 ## usage
 
-* `yarn install <package name>`
-* `import {...} from '<package name'`
+* `yarn add <package name>`
 
-### opt-ins
+```
+import debug from '<package name>'
 
-1. `args`
-1. `cache-manager`
-1. `joi-helper`
-1. `debug`
+const dbg = debug(__filename)
+```
 
-> * imported like: `import {...} from '<package name>/dist/<file name>'`
-> * certain components are made opt-in to avoid dependency bloat when not being used
-> * opt-ins will require that [`peerDependencies`](https://docs.npmjs.com/files/package.json#peerdependencies) are provided by consumer
+## example namespaces
+
+| `package name`         | `__filename`                               | `namespace`                                |
+| ---------------------- | ------------------------------------------ | ------------------------------------------ |
+| `my-package`           | `/Users/me/my-package/app/stuff/helper.js` | `dbg:my-package:app:stuff:helper`          |
+| `my-package`           | `/Users/me/my-package/app/stuff/index.js`  | `dbg:my-package:app:stuff`                 |
+| `@my-group/my-package` | `/Users/me/my-package/app/stuff/helper.js` | `dbg:my-group:my-package:app:stuff:helper` |
 
 ## development
 
