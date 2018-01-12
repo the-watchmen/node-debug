@@ -3,7 +3,7 @@ import _debug from 'debug'
 import findRoot from 'find-root'
 
 const pre = 'dbg'
-const dbg = _debug('dbg:@watchmen:debug')
+// const dbg = _debug('dbg:@watchmen:debug')
 
 export default function(file, {tag} = {}) {
   const base = path.basename(file, '.js')
@@ -19,6 +19,6 @@ export default function(file, {tag} = {}) {
   if (tag) {
     _path = `${_path}(${tag})`
   }
-  dbg('path=%o', _path)
+  // dbg('path=%o', _path)
   return _debug(_path)
 }
