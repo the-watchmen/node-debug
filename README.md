@@ -33,5 +33,5 @@ dbg('data=%o', data)
 
 1. `git clone {repo name}`
 1. `cd {repo name}`
-1. `yarn`
-1. `yarn test`
+1. `npm i`
+1. `npm test`
