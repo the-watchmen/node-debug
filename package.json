@@ -4,7 +4,10 @@
   "description": "",
   "type": "module",
   "main": "src/index.js",
-  "repository": "the-watchmen/node-debug",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-watchmen/node-debug.git"
+  },
   "scripts": {
     "ava": "export DEBUG=dbg:* && ava",
     "test": "xo && ava"
