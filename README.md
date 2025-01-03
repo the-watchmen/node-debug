@@ -5,13 +5,13 @@ wrapper around the popular [debug](https://github.com/visionmedia/debug) module 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![build status](https://github.com/the-watchmen/node-debug/actions/workflows/release.yaml/badge.svg)](https://github.com/the-watchmen/node-debug/actions)
-[![npm (scoped)](https://img.shields.io/npm/v/@watchmen/debug.svg)](https://img.shields.io/npm/v/@watchmen/_debug.svg)
+[![npm (scoped)](https://img.shields.io/npm/v/@watchmen/debug.svg)](https://www.npmjs.com/package/@watchmen/debug)
 
 > see [tests](test) for examples
 
 ## usage
 
-- `npm i <package name>`
+- `npm i @watchmen/debug`
 
 ```
 import debug from '@watchmen/debug'

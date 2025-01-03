@@ -3,14 +3,14 @@
   "version": "2.0.6",
   "description": "",
   "type": "module",
-  "main": "src/index.js",
+  "exports": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/the-watchmen/node-debug.git"
   },
   "scripts": {
-    "ava": "export DEBUG=dbg:* && ava",
-    "test": "xo && ava"
+    "pretest": "xo",
+    "test": "ava"
   },
   "author": "tony kerz",
   "license": "ISC",
