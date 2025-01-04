@@ -1,6 +1,6 @@
 {
   "name": "@watchmen/debug",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "",
   "type": "module",
   "exports": "./src/index.js",
